@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es-MX" data-type="product" data-radius="sharp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="page-type" content="product">
+  <meta name="site-kind" content="other">
+  <meta name="theme-color" content="#fbf1df">
+  <meta name="description" content="Prototipo no oficial de catálogo y compra para RC CAPS, Culiacán.">
+  <meta property="og:title" content="RC CAPS | Catálogo de demostración">
+  <meta property="og:description" content="Explora gorras por talla y ajuste en esta demo no oficial.">
+  <title>Gorras | RC CAPS · Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="shop.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#catalogo">Ir al catálogo</a>
+  <div class="notice">Prototipo no oficial <span aria-hidden="true">·</span> Compra simulada</div>
+  <header class="site-header">
+    <div class="mast wrap">
+      <button id="search-toggle" class="icon-button search-button" type="button" aria-controls="search-panel" aria-expanded="false"><span class="icon search-icon" aria-hidden="true"></span><span class="search-label">Buscar</span><span class="sr-only">Buscar gorras</span></button>
+      <a class="brand" href="#catalogo" aria-label="RC CAPS, catálogo"><span>RC<span class="brand-gap"> CAPS</span></span></a>
+      <button id="bag" class="icon-button bag-button" type="button" aria-label="Abrir bolsa"><span class="icon bag-icon" aria-hidden="true"></span><span class="bag-label">Bolsa</span><span id="bag-count">0</span></button>
+    </div>
+    <form id="search-panel" class="wrap search-panel" role="search" hidden>
+      <label for="query" class="sr-only">Buscar por modelo, color o ajuste</label>
+      <input id="query" type="search" placeholder="Busca un modelo, color o ajuste">
+      <button type="submit" class="solid">Buscar</button>
+    </form>
+    <nav class="category-nav" aria-label="Colecciones">
+      <button class="current" type="button" data-category="Todas" aria-pressed="true">Todas las gorras</button>
+      <button type="button" data-category="Cerradas" aria-pressed="false">Cerradas</button>
+      <button type="button" data-category="Ajustables" aria-pressed="false">Ajustables</button>
+      <button type="button" data-category="Trucker" aria-pressed="false">Trucker</button>
+      <a href="#tendencias">En tendencia</a>
+      <a href="#conocenos">Conócenos</a>
+    </nav>
+  </header>
+
+  <main class="wrap" id="catalogo">
+    <section class="catalog" aria-labelledby="catalog-title" data-enter>
+      <div class="heading">
+        <p class="breadcrumb">Catálogo <span aria-hidden="true">/</span> Gorras</p>
+        <div class="heading-line"><h1>Gorras</h1><p>Culiacán, Sinaloa</p></div>
+      </div>
+      <div class="layout">
+        <button type="button" id="filter-toggle" aria-expanded="false" aria-controls="filters">Filtros <span aria-hidden="true">+</span></button>
+        <aside class="filters" id="filters" aria-label="Filtros del catálogo">
+          <div class="filter-header"><h2>Filtrar por</h2><button id="reset" type="button" class="text-button">Limpiar</button></div>
+          <fieldset><legend>Ajuste</legend>
+            <label><input name="fit" type="radio" value="Todas" checked> Todas</label>
+            <label><input name="fit" type="radio" value="Cerradas"> Cerradas</label>
+            <label><input name="fit" type="radio" value="Ajustables"> Ajustables</label>
+            <label><input name="fit" type="radio" value="Trucker"> Trucker</label>
+          </fieldset>
+          <fieldset class="size-section"><legend>Talla</legend><div class="size-options" id="sizes"></div></fieldset>
+        </aside>
+        <div class="products">
+          <div class="toolbar">
+            <p id="result-count" aria-live="polite"></p>
+            <label for="sort">Ordenar <select id="sort"><option value="default">Destacadas</option><option value="price-asc">Menor precio</option><option value="price-desc">Mayor precio</option><option value="name">Nombre</option></select></label>
+          </div>
+          <div id="product-grid" class="product-grid"></div>
+        </div>
+      </div>
+    </section>
+    <section class="trends" id="tendencias" aria-labelledby="trends-title">
+      <div class="section-intro">
+        <h2 id="trends-title">En tendencia</h2>
+        <p>Una selección del catálogo de muestra.</p>
+      </div>
+      <div class="trend-list">
+        <button class="trend-link" type="button" data-featured="cobre">
+          <span><strong>Doble Tono Cobre</strong><small>Cerrada · Visera en contraste</small></span>
+          <span aria-hidden="true">↗</span>
+        </button>
+        <button class="trend-link" type="button" data-featured="trucker">
+          <span><strong>Trucker Vino</strong><small>Ajustable · Malla trasera</small></span>
+          <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </section>
+    <section class="about" id="conocenos" aria-labelledby="about-title">
+      <div class="section-intro">
+        <h2 id="about-title">Conócenos</h2>
+        <p>RC CAPS es una tienda de gorras de Culiacán, Sinaloa. Su catálogo público reúne modelos cerrados por talla, ajustables y trucker.</p>
+      </div>
+      <div class="about-links">
+        <div>
+          <h3>Ubicación</h3>
+          <p>Culiacán, Sinaloa, México</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Culiac%C3%A1n%2C%20Sinaloa" target="_blank" rel="noopener noreferrer">Ver la ciudad en el mapa ↗</a>
+        </div>
+        <div>
+          <h3>Redes</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/rccapsmx/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+            <li><a href="https://www.tiktok.com/@rc_caps" target="_blank" rel="noopener noreferrer">TikTok ↗</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61557627935799" target="_blank" rel="noopener noreferrer">Facebook ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><span class="footer-mark">RC CAPS</span><span>Imágenes y precios de demostración</span><a href="https://linktr.ee/rccaps" target="_blank" rel="noopener noreferrer">Canales de RC CAPS ↗</a></footer>
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="product-name">
+    <button class="close" data-close type="button" aria-label="Cerrar ficha">×</button>
+    <div id="product-detail"></div>
+  </dialog>
+  <dialog id="bag-dialog" class="bag-dialog" aria-labelledby="bag-title">
+    <div class="bag-heading"><h2 id="bag-title">Tu bolsa</h2><button class="close" data-close type="button" aria-label="Cerrar bolsa">×</button></div>
+    <div id="bag-detail"></div>
+  </dialog>
+  <div id="status" class="sr-only" role="status"></div>
+</body>
+</html>
